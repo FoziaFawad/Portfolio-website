@@ -6,7 +6,7 @@ export default function Home() {
   const [filter, setFilter] = React.useState<"all" | "owned" | "contributed">("all");
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [menuClosing, setMenuClosing] = React.useState(false);
-  const [openFaqs, setOpenFaqs] = React.useState<{ [key: number]: boolean }>({});
+  const [openFaqs, setOpenFaqs] = React.useState<{ [key: number]: boolean }>({ 1: true });
   const lenisRef = React.useRef<any>(null);
 
   // Initialize Lenis, word/line split reveals, and parallax
@@ -1212,7 +1212,7 @@ export default function Home() {
 
               <div className="faq__right">
                 {/* Q1 */}
-                <div className={`faq-item ${openFaqs[1] ? "is-open" : ""}`} data-reveal="fade" style={{ "--delay": "0ms" } as React.CSSProperties}>
+                <div className={`faq-item ${openFaqs[1] ? "is-open" : ""}`}>
                   <h3>
                     <button
                       type="button"
@@ -1229,23 +1229,19 @@ export default function Home() {
                   <div
                     id="faq-panel-1"
                     className="faq-item__panel"
-                    style={{
-                      height: openFaqs[1] ? "auto" : "0px",
-                      opacity: openFaqs[1] ? 1 : 0,
-                    }}
                     role="region"
                     aria-labelledby="faq-btn-1"
                   >
                     <div className="faq-item__answer-wrap">
                       <p className="faq-item__answer">
-                        I am eager to apply my skills in a professional environment and am currently seeking internships or entry-level opportunities in Software Engineering or Cybersecurity.
+                        As a Software Engineering undergraduate at Salim Habib University (2026&ndash;Present), I am actively seeking internships and entry-level opportunities in Software Engineering, Full-Stack Web Development, and Cybersecurity. I am open to on-site, hybrid, and remote roles&mdash;as well as collaborative research and engineering projects&mdash;where I can contribute to building reliable web applications, object-oriented systems, and security-conscious architectures.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Q2 */}
-                <div className={`faq-item ${openFaqs[2] ? "is-open" : ""}`} data-reveal="fade" style={{ "--delay": "80ms" } as React.CSSProperties}>
+                <div className={`faq-item ${openFaqs[2] ? "is-open" : ""}`}>
                   <h3>
                     <button
                       type="button"
@@ -1262,23 +1258,19 @@ export default function Home() {
                   <div
                     id="faq-panel-2"
                     className="faq-item__panel"
-                    style={{
-                      height: openFaqs[2] ? "auto" : "0px",
-                      opacity: openFaqs[2] ? 1 : 0,
-                    }}
                     role="region"
                     aria-labelledby="faq-btn-2"
                   >
                     <div className="faq-item__answer-wrap">
                       <p className="faq-item__answer">
-                        My frontend stack includes React, Next.js, TypeScript, JavaScript, HTML5, CSS3, and Tailwind CSS, paired with Node.js and RESTful APIs on the backend, alongside OOP, C++, and Java.
+                        My core web stack includes React, Next.js (App Router), TypeScript, JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS on the frontend, paired with Node.js and RESTful APIs on the backend. For systems and object-oriented programming, I work with C++ and Java. My daily development workflow relies on Git, GitHub, Vercel, VS Code, and Antigravity, applied across production builds such as &Eacute;ternelle Gems, ThermoAgent AI, the Climate Change &amp; Heatwave Observatory, and IHIMS.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Q3 */}
-                <div className={`faq-item ${openFaqs[3] ? "is-open" : ""}`} data-reveal="fade" style={{ "--delay": "160ms" } as React.CSSProperties}>
+                <div className={`faq-item ${openFaqs[3] ? "is-open" : ""}`}>
                   <h3>
                     <button
                       type="button"
@@ -1295,23 +1287,19 @@ export default function Home() {
                   <div
                     id="faq-panel-3"
                     className="faq-item__panel"
-                    style={{
-                      height: openFaqs[3] ? "auto" : "0px",
-                      opacity: openFaqs[3] ? 1 : 0,
-                    }}
                     role="region"
                     aria-labelledby="faq-btn-3"
                   >
                     <div className="faq-item__answer-wrap">
                       <p className="faq-item__answer">
-                        I hold Coursera certifications in Foundations of Cybersecurity, Manage Security Risks, and Network Security, with practical grounding in Network Security Fundamentals and Risk Management.
+                        I have completed specialized Coursera certifications in Foundations of Cybersecurity, Manage Security Risks, and Network Security. Through this training and my academic coursework, I have built practical grounding in network security fundamentals, threat and vulnerability assessment, risk management frameworks, security governance, and designing resilient incident-reporting workflows.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Q4 */}
-                <div className={`faq-item ${openFaqs[4] ? "is-open" : ""}`} data-reveal="fade" style={{ "--delay": "240ms" } as React.CSSProperties}>
+                <div className={`faq-item ${openFaqs[4] ? "is-open" : ""}`}>
                   <h3>
                     <button
                       type="button"
@@ -1328,16 +1316,29 @@ export default function Home() {
                   <div
                     id="faq-panel-4"
                     className="faq-item__panel"
-                    style={{
-                      height: openFaqs[4] ? "auto" : "0px",
-                      opacity: openFaqs[4] ? 1 : 0,
-                    }}
                     role="region"
                     aria-labelledby="faq-btn-4"
                   >
                     <div className="faq-item__answer-wrap">
                       <p className="faq-item__answer">
-                        You can reach me directly by email at syfozi.fawad857@gmail.com, or connect via LinkedIn (Syeda Fozia Fawad) and GitHub (github.com/foziafawad).
+                        You can reach me directly via email at{" "}
+                        <a href="mailto:syfozi.fawad857@gmail.com">syfozi.fawad857@gmail.com</a>, connect with me on LinkedIn as{" "}
+                        <a
+                          href="https://www.linkedin.com/in/syeda-fozia-fawad-78653b408/"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          Syeda Fozia Fawad
+                        </a>
+                        , or explore my repositories on GitHub at{" "}
+                        <a
+                          href="https://github.com/foziafawad"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          github.com/foziafawad
+                        </a>
+                        . I respond promptly to messages regarding internships, entry-level roles, and technical collaborations.
                       </p>
                     </div>
                   </div>
